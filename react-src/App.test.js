@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import App from './App';
 
@@ -66,3 +67,13 @@ test('check if name tile changes with correct guess', async () => {
   
 });
 
+=======
+import { render, screen } from '@testing-library/react';
+import App from './App';
+
+test('renders learn react link', () => {
+  render(<App />);
+  const linkElement = screen.getByText(/learn react/i);
+  expect(linkElement).toBeInTheDocument();
+});
+>>>>>>> cf83e39e57c96d0b446943a013acfe9e8db05f80
