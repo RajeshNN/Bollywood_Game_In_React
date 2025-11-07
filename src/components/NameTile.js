@@ -24,9 +24,9 @@ export default function NameTile(props) {
       }
       else if(!isAlphaNumeric(word[i])) {
         res += word[i];
-        let obj = props.guesses;
-        obj.add(word[i]);
-        props.setGuesses(new Set(obj));
+        //let obj = props.guesses;
+        //obj.add(word[i]);
+        //props.setGuesses(new Set(obj));
       }
       else{
         res += "#";
@@ -35,10 +35,11 @@ export default function NameTile(props) {
     return res;
   }
 
+  let ind = 100;
   return (
-    <span>
+    <span className="name_tile">
       {props.title.split(" ").map((word, iw) => (
-        <b style={{fontSize : 30, color : "red"}}> {helper(word)}&nbsp;&nbsp;</b>
+        <b key={ind*iw} style={{fontSize : 30, color : "red"}}> {helper(word)}&nbsp;&nbsp;</b>
       ))}
       <div key={props.correctGuesses.size} className="firework" id="name-tile"></div>
       <div key={props.correctGuesses.size} className="firework" id="name-tile"></div>

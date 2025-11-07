@@ -41,7 +41,7 @@ export default function BollyGame(props) {
         <BollyTile wrongGuesses={guesses.size - correctGuesses.size}/>
       </div>
       <div className="container my-4 tile mx-auto">
-        <NameTile title={props.title} guesses={guesses} setGuesses={setGuesses} correctGuesses={correctGuesses}/>
+        <NameTile key="1" title={props.title} guesses={guesses} setGuesses={setGuesses} correctGuesses={correctGuesses}/>
       </div>
       <div className="container my-4 position-absolute tile mx-auto text-center">
         <AlphabetTile guesses={guesses} setGuesses={setGuesses} stopGame={guesses.size - correctGuesses.size >= 9 || correctGuesses.size === alphaName.size} />

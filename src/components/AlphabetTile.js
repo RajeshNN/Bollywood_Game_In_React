@@ -9,9 +9,9 @@ export default function AlphabetTile(props) {
     props.setGuesses(new Set(obj));
   }
   return (
-    <div>
+    <div className='alphabet_tile text-center'>
       <button className="btn btn-primary mx-2 my-2 btn-circle" disabled={props.stopGame} id='A' type="button" onClick={clickHandler}>A</button>
-      <button className="btn btn-primary mx-2 my-2 btn-circle" disabled={props.stopGame} id='B' type="button" onClick={clickHandler}>B</button>
+      <button className="btn btn-primary mx-2 my-2 btn-circle" disabled={props.stopGame} name='B' type="button" onClick={clickHandler}>B</button>
       <button className="btn btn-primary mx-2 my-2 btn-circle" disabled={props.stopGame} id='C' type="button" onClick={clickHandler}>C</button>
       <button className="btn btn-primary mx-2 my-2 btn-circle" disabled={props.stopGame} id='D' type="button" onClick={clickHandler}>D</button>
       <button className="btn btn-primary mx-2 my-2 btn-circle" disabled={props.stopGame} id='E' type="button" onClick={clickHandler}>E</button>

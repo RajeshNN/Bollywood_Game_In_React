@@ -10,14 +10,15 @@ function App() {
     fetch('/movies.json')
     .then((res) => res.json())
     .then((data) => {
-      // console.log(data);
-      let x = Math.floor(Math.random() * 2000);
+      //console.log(data);
+      let x = Math.floor(Math.random() * (Object.keys(data.movie_names).length - 1));
       setMovie(data.movie_names[x]);
     })
     .catch((error) => {
       console.log(error.message);
     });
   }, []);
+  //console.log(movie);
 
   return (
     <div className="App">
